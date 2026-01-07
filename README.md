@@ -36,3 +36,51 @@ Create and activate a virtual environment, then install dependencies:
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+## Usage
+
+Run the pipeline on the included demonstration data:
+
+```bash
+python3 finalfinalqacclean_github_native.py \
+  --quantified_zip data/demo_quantified.zip \
+  --unquantified_zip data/demo_unquantified.zip \
+  --n 5
+```
+The --n flag controls how many image pairs are processed.
+If omitted, the pipeline will process all matched image pairs in the provided datasets.
+
+
+---
+
+## Outputs
+
+Running the pipeline creates an `outputs/` directory containing:
+
+- **predictions.csv**  
+  Quantitative measurements computed from the selected muscle fibers and associated myonuclei.
+
+- **annotated_*.png**  
+  Annotated images showing the automatically selected, non-adjacent fibers and detected nuclei overlaid on the raw images.
+
+The annotated images visualize the *same fibers used for quantification*, ensuring that visual outputs faithfully represent the underlying analysis.
+
+
+## System Dependency: Tesseract OCR
+
+This project uses Tesseract OCR via the `pytesseract` Python package.  
+The Tesseract engine itself must be installed separately.
+
+### macOS
+```bash
+brew install tesseract
+```
+### Ubuntu / Debian
+```bash
+sudo apt-get install tesseract-ocr
+```
+If Tesseract is not installed, the pipeline may fail or skip OCR-related steps.
+
+
+
