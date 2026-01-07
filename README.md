@@ -83,7 +83,8 @@ sudo apt-get install tesseract-ocr
 If Tesseract is not installed, the pipeline may fail or skip OCR-related steps.
 
 ### Credits
-Collaborators: Leo Farina, Leo Ha, Paul Terry, Ethan Dangel
-Coding: Leo Farina, Leo Ha
+**Collaborators:** Leo Farina, Leo Ha, Paul Terry, Ethan Dangel
+
+**Coding:** Leo Farina, Leo Ha
 
 
