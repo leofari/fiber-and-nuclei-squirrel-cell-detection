@@ -28,3 +28,7 @@ Reuse existing repository. Add each content-distinct local source snapshot on de
 Existing remote main baseline `d9e6e079496017d1d3ec57f27e77ed42d5d97035`. Primary application source was retained; unique local versions are preserved on archive branches.
 
 Original working directories were read only. Source history is preserved where it existed and passed audit. Archive snapshots with no original Git metadata must not be treated as evidence of shared Git ancestry. Conversation transcripts are excluded.
+
+## Initial remote verification
+
+Initial approved main verified at `484eef1aab7e6420b356d8e82b20cd3869130a2e` on 2026-11-09. 7 preservation branches were verified. A following documentation-only commit finalizes current handoff context; consult current Git refs for its hash.
